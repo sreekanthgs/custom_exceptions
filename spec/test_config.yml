@@ -8,7 +8,7 @@ default_exception:
   
 argument_exception:
   code: 10002
-  message: Hello World
+  message: This is an argument exception
   metadata:
     key1: value1
     key2: value2

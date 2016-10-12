@@ -26,13 +26,14 @@ module CustomExceptions
           @metadata = options[:metadata]
           @code = options[:code]
           @message = options[:message]
-          @status = options[:status] || 500
+          @status = options[:status]
         end
-        klass.send(:define_method, :metadata) { @metadata }
+        klass.send(:define_method, :metadata) { @metadata || error_body["metadata"] }
         klass.send(:define_method, :code) { @code || error_body["code"]}
         klass.send(:define_method, :message) { @message || error_body["message"] }
         klass.send(:define_method, :status) { @status || error_body["status"]}
-        CustomExceptions.const_set(name.classify, klass)
+        CustomExceptions.send(:remove_const, name.to_s.classify) if CustomExceptions.const_defined?(name.to_s.classify)
+        CustomExceptions.const_set(name.to_s.classify, klass)
       end
     end
     
