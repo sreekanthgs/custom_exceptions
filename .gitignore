@@ -1,0 +1,5 @@
+.DS_Store
+tmp/*
+coverage/*
+vendor/bundle
+.bundle
