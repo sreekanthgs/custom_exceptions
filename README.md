@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/sreekanthgs/bip_mnemonic.svg?branch=master)](https://travis-ci.org/sreekanthgs/custom_exceptions)
+[![Gem Version](https://badge.fury.io/rb/custom_exceptions.svg)](https://badge.fury.io/rb/custom_exceptions)
+[![codecov](https://codecov.io/gh/sreekanthgs/custom_exceptions/branch/master/graph/badge.svg)](https://codecov.io/gh/sreekanthgs/custom_exceptions)
+
 # README
 
 CustomExceptions allows generation of custom exception classes from yaml config files or at runtime to be used in Ruby or RubyonRails.
